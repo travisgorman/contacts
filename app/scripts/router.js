@@ -4,13 +4,13 @@ import Backbone from 'backbone';
 import _ from 'underscore';
 
 //models
-import user from './Models/username';
+import user from './Models/user';
 import contact from './Models/contact-model';
 
 //views (render functions)
-import rendercontactForm from './Views/add-new-contact';
-import rendercontacts from './Views/contact-list';
-import rendercontact from './Views/single-contact';
+import contactForm from './Views/add-new-contact';
+import renderContacts from './Views/contact-list';
+import renderContact from './Views/single-contact';
 
 //views (elements)
 import $login from '/Views/login';
@@ -55,16 +55,16 @@ const Router = Backbone.Router.extend({
       }
     });
     let $contactList = renderContacts( contactsCollection );
-    $('.container')
+    $( '.container' )
       .empty()
         .append( $nav )
           .append( $contactList );
   },
 
-  contactFunction: function( id ){
+  contactFunction: function( id ) {
     //
     let contact;
-    if ( contactsCollection.get( id ) ){
+    if ( contactsCollection.get( id ) ) {
       contact = contactsCollection.get( id );
     } else {
       contact = new contact({
@@ -76,16 +76,17 @@ const Router = Backbone.Router.extend({
     //
     let $contactList = renderContacts( contactsCollection );
     let $contact = renderContacts( contact );
+    
     $('.container').empty()
       .append( $nav )
         .append( $contactList )
           .append( $contact );
     //
-    contact.on( 'change', function( model ){
+    contact.on( 'change', function( model ) {
       let $contactList = renderContacts( contactsCollection );
       let $contact = renderContacts( model );
       if ( location.hash === '#contacts/' + id ){
-      $('.container').empty()
+      $( '.container' ).empty()
         .append( $nav )
           .append( $contactList )
             .append( $contact );
@@ -93,17 +94,16 @@ const Router = Backbone.Router.extend({
     });
   },
 
-  newContactFunction: function(){
+  newContactFunction: function() {
     let $newContact = renderContactForm();
     //empty container and append $nav and $newContact
-    $('.container')
+    $( '.container' )
       .empty()
         .append( $nav )
           .append( $newContact );
   }
 
 });
-
 // create an instance of router
 const router = new Router();
 // export router to ( global scope? ) so it can be used in entry.js runtime code.
