@@ -1,11 +1,12 @@
 import $ from 'jquery';
-import contactsCollection from '../collections/contacts';
+import contactsCollection from '../Collections/contacts';
 import router from '../router';
 
-import user from '../models/username';
+import user from '../Models/user';
 
 function contactForm() {
     let $newContact = $(`
+
     <div class="contact-form">
       <h2>Write a new contact</h2>
       <form>
@@ -16,6 +17,7 @@ function contactForm() {
         <input type="submit" name="submit" value="submit">
       </form>
     </div>
+    
   `);
 
     $newContact.find( 'input[type="submit"]' ).on( 'click', function( evt ) {

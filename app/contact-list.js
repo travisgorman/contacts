@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import moment from 'moment';
 
 function renderContacts(contactsCollection) {
     let $contactList = $(`
@@ -15,7 +14,7 @@ function renderContacts(contactsCollection) {
         let $contactItem = $(`
 
           <li class="contact-list-item">
-            <h3 class="contact-list-title">
+            <h3 class="name">
 
             </h3>
             <p class="nickname">

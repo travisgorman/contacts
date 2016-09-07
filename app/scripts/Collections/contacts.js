@@ -1,12 +1,12 @@
 import Backbone from 'backbone';
-import Post from '../models/contact-model';
+import Post from '../models/contactModel';
 import settings from '../settings';
 
 const Contacts = Backbone.Collection.extend({
   model: contact,
-  url: `https://baas.kinvey.com/appdata/${ settings.appId }/contacts`
+  url: `https://baas.kinvey.com/appdata/${ settings.appKey }/contacts`
 });
 
-let contactsCollection = new Contacts();
+let contacts = new Contacts();
 
-export default contactsCollection;
+export default contacts;

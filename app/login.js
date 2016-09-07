@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import settings from '../settings';
-import user from './Models/username';
+import user from '../Models/user';
 
 let $login = $(`
 
@@ -20,9 +20,11 @@ let $login = $(`
 // on click, make POST request
 
 $login.find( 'input[type="submit"]' )
-  .on( 'click', function( evt ){
-    // store entered values into variables
+  .on( 'c1lick', function( evt ){
+
+    // store entered values into variables`df
     // pass kinvey stuff into btoa() and store as a variable
+
     evt.preventDefault();
     let username =  $login.find( '#username' ).val();
     let password =  $login.find( '#password' ).val();
@@ -31,13 +33,13 @@ $login.find( 'input[type="submit"]' )
     // ajax post request
     $.ajax({
       type: 'POST',
-      url: `http://baas.kinvey.com/user/${settings.appId}/login`,
+      url: `http://baas.kinvey.com/user/${ settings.appId }/login`,
       data: JSON.stringify( {
         username: username,
         password: password
       }),
       headers: {
-        Authorization: `Basic ${encrypted}`
+        Authorization: `Basic ${ encrypted }`
       },
       contentType: 'application/json',
       succsss: function( response ){
