@@ -1,1 +1,0 @@
-console.error("Error: Cannot find module './views/login' from '/Users/travisgorman/Dropbox/tiy/26/contacts/app/scripts'");
