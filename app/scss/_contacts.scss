@@ -1,0 +1,51 @@
+
+#contacts {
+  // background: $primary;
+  // color: $text;
+  .ul-contact-list {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    // background: $text;
+    li {
+      // display: inline-block;
+      list-style-type: none;
+      margin: 2%;
+      color: $headings;
+      font-size: 1.1em;
+      background:$primary;
+      &:hover {
+        border: 2px dotted $accent;
+      }
+      h3 {
+        color: rgba(#8332AC, 0.6);
+        width: 25%;
+        margin: 0 auto;
+        font-size: 1.5em;
+
+      }
+    }
+  }
+
+
+  }
+//toggle part
+.test {
+  // background: $secondary;
+  height: 10%;
+  // display: flex;
+  padding: 20px;
+  transition: 500ms;
+  .div-dropdown {
+    display: none;
+  }
+}
+
+.show-dropdownView {
+  background: rgba(#1A5E63,0.7);
+  transition: 500ms;
+  .div-dropdown {
+    display: block;
+    transition: 500ms;
+  }
+}
