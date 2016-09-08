@@ -60,7 +60,7 @@ function renderSignup(){
 
           },
           error: function(){
-            console.log('Error! You failed to make a new user! Check login.js or router.js');
+            console.log('Error! You failed to make a new user!');
           }
         });
       }

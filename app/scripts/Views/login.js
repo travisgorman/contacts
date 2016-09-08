@@ -55,7 +55,7 @@ function renderLogin(){
           $('#password').val('');
         },
         error: function(){
-          console.log('Error! You failed to login! Check login.js or router.js');
+          console.log('Error! You failed to login!');
         }
       });
 

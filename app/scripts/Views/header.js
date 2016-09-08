@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import Backbone from 'backbone';
-
 import router from '../router';
 import settings from '../settings';
 import session from '../models/session';
@@ -50,7 +49,7 @@ function renderHeader(){
           console.log('You logged out!');
         },
         error: function(){
-          console.log('Error! You failed to logout! Check header.js');
+          console.log('Error! You failed to logout!');
         }
       });
     });

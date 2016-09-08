@@ -1,27 +1,22 @@
 import $ from 'jquery';
 import Backbone from 'backbone';
 import settings from './settings';
-
 import contactsCollection from './collections/contactsCollection';
 import session from './models/session';
-
 import renderLogin from './views/login';
 import renderSignup from './views/signup';
 import renderHeader from './views/header';
 import renderContacts from './views/contacts';
 import createNew from './views/newContact';
 
-
 const Router = Backbone.Router.extend({
-
 routes : {
               login : 'loginFunction',
      'login/signup' : 'signupFunction',
         'contacts' : 'contactListFunction',
     'contacts/new' : 'newContactFunction',
     'contacts/:id' : 'indvContactFunction',
-  // 'profile/:id'  : 'profileFunction',
-              '/*'  : 'profileFunction'
+              '/*'  : 'loginFunction'
 },
 
 loginFunction : function(){
@@ -31,8 +26,6 @@ loginFunction : function(){
   }
   let $login = renderLogin();
   $('.container').empty().append($login);
-  console.log('username is shannon');
-  console.log('password is password');
 },
 signupFunction : function(){
   let $login = renderLogin();
