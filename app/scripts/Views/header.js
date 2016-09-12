@@ -16,7 +16,7 @@ function renderHeader(){
         <ul class="ul-nav">
           <li id="contacts-link">Contacts</li>
           <li id="create-new-link">Create New</li>
-          <li id="settings">Settings</li>
+          // <li id="settings">Settings</li>
         </ul>
       </nav>
     </header>
