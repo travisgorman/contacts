@@ -16,23 +16,15 @@ function renderContacts() {
     `);
 
  function renderSingleContact(contact){
-   console.log(contact);
+  //  console.log(contact);
    let $contactLi = $(`
      <li class="test">
-       <h3 class="contact-title">
-        ${contact.get('fullname')}
-      </h3>
+       <h3 class="contact-title">${contact.get('fullname')}</h3>
        <div class="div-dropdown">
           <ul class="ul-dropdown">
-            <li class="contact-nickname">
-              ${contact.get('nickname')}
-            </li>
-            <li>
-              ${contact.get('email')}
-            </li>
-            <li>
-              ${contact.get('phone')}
-            </li>
+            <li class="contact-nickname">"${contact.get('nickname')}"</li>
+            <li>${contact.get('email')}</li>
+            <li>${contact.get('phone')}</li>
           </ul>
        </div>
      </li>

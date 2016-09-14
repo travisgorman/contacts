@@ -12,8 +12,16 @@ function renderLogin(){
       <div class="login-modal">
         <div class="login-section">
           <h2>Login</h2>
-          <input id="username" type="text" name="username" placeholder="username">
-          <input id="password" type="password" name="password" placeholder="password">
+          <input id="username"
+            class="username"
+            type="text"
+            name="username"
+            placeholder="username">
+          <input id="password"
+            class="password"
+            type="password"
+            name="password"
+            placeholder="password">
           <button class="login-btn">Enter</button>
         </div>
         <div class="sub-signup-section">
@@ -31,6 +39,7 @@ function renderLogin(){
 
     $login.find('.login-btn').on('click', function(evt){
       evt.preventDefault();
+      console.log(evt, username, password, settings)
       let username = $('#username').val();
       let password = $('#password').val();
       let encrypted = btoa(settings.appKey + ':' + settings.appSecret);
@@ -55,7 +64,7 @@ function renderLogin(){
           $('#password').val('');
         },
         error: function(){
-          console.log('Error! You failed to login!');
+          console.log('ERROR! You failed to login!');
         }
       });
 

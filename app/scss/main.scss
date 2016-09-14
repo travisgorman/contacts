@@ -1,15 +1,52 @@
-@import "../../node_modules/normalize-scss/sass/normalize/import-now";
-@import "variables";
-@import "login";
-@import "signup";
-@import "header";
-@import 'contacts';
-
-
 body {
   margin: 0;
   padding: 0;
-//   font-family: Avenir;
-//   background: $background;
-  // color: $primary;
+  background-color: #B9D8C2;
+  font-size: 1rem;
+  font-family: sans-serif;
+  font-size: 1rem;
+  list-style-type: none;
+  padding: .8rem;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+}
+header section button {
+  padding: .5rem;
+  border-radius: 6px;
+  font-size: .9rem;
+  background-color: #9EE493;
+  border: none;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+
+  li {
+    padding: .5rem;
+    border-radius: 6px;
+    background: #DDF7D9;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    margin: 1rem;
+  }
+}
+.ul-contact-list {
+  list-style-type: none;
+}
+.test {
+  background: #E2E0E0;
+  width: 60%;
+  list-style: none;
+  padding: .8rem;
+  margin: 1.25rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.form-new-contact {
+  input {
+    font-size: 1rem;
+    cursor: pointer;
+  }
 }

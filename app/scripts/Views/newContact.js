@@ -8,14 +8,32 @@ import contactsCollection from '../collections/contactsCollection';
 function createNew() {
     let $newContact = $(`
     <main>
-    	<form class="form-new-contact">
-    		<input id="#fullname" type="text" name="fullname" placeholder="fullname">
-    		<input id="#nickname" type="text" name="nickname" placeholder="nickname">
-    		<input id="#email" type="text" name="email" placeholder="email">
-    		<input id="#phone" type="text" name="phone" placeholder="phone">
-        <button id="clear">clear</button>
-        <button id="cancel">cancel</button>
-        <button id="add-new">add new</button>
+    	<form class="form-new-contact" >
+    		<input id="fullname"
+          type="text"
+          name="fullname"
+          placeholder="fullname" >
+    		<input id="#nickname" 
+          type="text"
+          name="nickname"
+          placeholder="nickname" >
+    		<input id="email"
+          type="text"
+          name="email"
+          placeholder="email" >
+    		<input id="phone"
+          type="text"
+          name="phone"
+          placeholder="phone" >
+        <button id="clear">
+          clear
+        </button>
+        <button id="cancel">
+          cancel
+        </button>
+        <button id="add-new">
+          add new
+        </button>
     	</form>
     </main>
       `);

@@ -1,6 +1,3 @@
-let session = {
-  username : '',
-  authtoken: ''
+export default {
+  username : ''
 };
-
-export default session;

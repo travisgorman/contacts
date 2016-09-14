@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import Backbone from 'backbone';
-
 import settings from '../settings';
 
 const Contact = Backbone.Model.extend({

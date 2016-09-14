@@ -9,16 +9,31 @@ import renderLogin from './login';
 function renderSignup(){
   let $signup = $(`
     <div id="signup">
-    		<div class="sub-signup-container">
-    			<h3>Sign Up</h3>
-    			<form class="signup-form">
-    				<input id="new-username" type="text" name="username" placeholder="username">
-    				<input id="pw1" class="password-input" type="password" name="password" placeholder="password">
-    				<input id="pw2" class="password-input" type="password" name="confirm-password" placeholder="confirm password">
-    				<button id="signup-submit" class="signup-btn">Enter</button>
-    			</div>
-    		</div>
-    	</div>
+        <div class="sub-signup-container" >
+          <h3>Sign Up</h3>
+          <form class="signup-form" >
+            <input id="new-username"
+              class=new-username
+              type="text"
+              name="username"
+              placeholder="username" >
+            <input id="pw1"
+              class="password-input"
+              type="password"
+              name="password"
+              placeholder="password" >
+            <input id="pw2"
+              class="password-input"
+              type="password"
+              name="confirm-password"
+              placeholder="confirm password" >
+            <button id="signup-submit"
+              class="signup-btn">
+              Enter
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
     `);
 

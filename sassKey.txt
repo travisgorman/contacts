@@ -1,0 +1,68 @@
+//=== main.scss
+body {}
+
+//=== _login.scss
+.login-modal {
+  .login-section {
+    h2 {}
+    input.username {}
+    input.password {}
+    button.login-btn {}
+  }
+  .sub-signup-section {
+    h3 {}
+    button.signup-btn {}
+  }
+}
+//=== _signup.scss
+.sub-signup-container {
+  h3 {}
+  form.signup-form {
+    input.new-username {}
+    input.password-input {}
+    button.signup-btn {}
+  }
+}
+//=== _header.scss
+header {
+  section {
+    h2 {}
+    button {}
+  }
+  nav {
+    ul {
+      li {
+        list-style-type: none
+      }
+    }
+  }
+}
+//=== _contacts.scss
+.contacts-page {
+  main {
+    ul.contact-list {}
+  }
+  li {
+    h3 {}
+    .div-dropdown {
+      ul {
+        li {
+          .nickname {}
+          .email {}
+          .phone {}
+        }
+      }
+    }
+  }
+}
+//=== _newContact.scss
+main {
+  form {
+    .form-new-contact {
+      input[type="text"] {}
+      button.clear {}
+      button.cancel {}
+      button.add-new {}
+    }
+  }
+}

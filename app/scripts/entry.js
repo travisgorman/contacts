@@ -1,28 +1,28 @@
 import $ from 'jquery';
 import Backbone from 'backbone';
-import settings from './settings';
+
 import router from './router';
-import session from './Models/session'
+import settings from './settings';
+import session from './models/session';
 
-$(document).ajaxSend(function (evt, xhrAjax, jqueryAjax) {
-  console.log('intercepted');
-
+$(document).ajaxSend(function(evt, xhrAjax, jqueryAjax){
+  console.log('interecepted');
   if (session.authtoken) {
-    xhrAjax.setRequestHeader('Authorization', `Kinvey ${session.authtoken}`)
+    xhrAjax.setRequestHeader('Authorization', 'Kinvey ' + session.authtoken);
   } else {
-    xhrAjax.setRequestHeader('Authorization', `Basic ${settings.basicAuth}`)
+    xhrAjax.setRequestHeader('Authorization', 'Basic ' + settings.basicAuth);
   }
 });
 
-if (window.sessionStorage.session) {
-  session.username = JSON.parse(window.sessionStorage.session).username
-  session.authtoken = JSON.parse(window.sessionStorage.session).authtoken
-  }
+if (sessionStorage.session){
+  session.username = JSON.parse(sessionStorage.session).username;
+  session.authtoken = JSON.parse(sessionStorage.session).authtoken;
+}
 
 Backbone.history.start();
 
-if( !session.username ){
+if (!session.username) {
   router.navigate('login', {trigger:true});
 }
 
-console.log( settings );
+console.log(settings);
